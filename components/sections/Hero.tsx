@@ -53,7 +53,7 @@ export default function Hero() {
       <div ref={contentRef} className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-full">
         {/* Main Catchphrase - Character by character */}
         <div className="mb-10 sm:mb-14 md:mb-16">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight whitespace-nowrap">
             <div className="neon-glow glow-animate">
               <CharcterAnimation text="Create Movement" delay={0} />
             </div>
@@ -65,7 +65,7 @@ export default function Hero() {
           <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-gray-300 font-light space-y-3">
             <span className="block">面白い未来は、面白い人から生まれる。</span>
             <span className="block">常識を疑う人と共に生きたい。</span>
-            <span className="block">仕事の話よりあなたの野望を聞かせてください。</span>
+            <span className="block">あなたの野望を聞かせてください。</span>
             <span className="block">正論より熱狂できるストーリーを。</span>
           </p>
         </div>
