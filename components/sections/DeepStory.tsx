@@ -124,6 +124,7 @@ export default function DeepStory() {
 
   return (
     <section
+      id="story"
       ref={sectionRef}
       className="relative bg-dark-bg py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden"
     >

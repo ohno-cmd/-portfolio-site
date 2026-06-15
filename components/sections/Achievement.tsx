@@ -157,6 +157,7 @@ export default function Achievement() {
 
   return (
     <section
+      id="achievement"
       ref={sectionRef}
       className="relative bg-dark-secondary py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden"
     >

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: '大野修斗 - ポートフォリオ',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="bg-dark-bg text-white">{children}</body>
+      <body className="bg-dark-bg text-white">
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

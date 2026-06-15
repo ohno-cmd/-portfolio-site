@@ -43,6 +43,7 @@ export default function Contact() {
 
   return (
     <section
+      id="contact"
       ref={sectionRef}
       className="relative min-h-screen bg-gradient-to-b from-dark-secondary to-dark-bg flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-hidden"
     >

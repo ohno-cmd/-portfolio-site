@@ -2,7 +2,7 @@
 
 export default function ParticleBackground() {
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <>
       <video
         autoPlay
         loop
@@ -12,6 +12,6 @@ export default function ParticleBackground() {
       >
         <source src="/video/花火.mp4" type="video/mp4" />
       </video>
-    </div>
+    </>
   )
 }
