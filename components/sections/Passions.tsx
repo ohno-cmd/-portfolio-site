@@ -28,6 +28,61 @@ const passions = [
   },
 ]
 
+const getIconForPassion = (title: string): JSX.Element => {
+  const baseClasses = 'w-full h-32 rounded-lg object-cover'
+
+  switch (title) {
+    case '犬':
+      return <img src="/image/犬.jpg" alt="犬" className={baseClasses} />
+    case '朝活':
+      return <img src="/image/朝活.jpg" alt="朝活" className={baseClasses} />
+    case '英語':
+      return (
+        <div className="w-full h-32 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-3xl">
+          🌍
+        </div>
+      )
+    case '写真':
+      return (
+        <div className="w-full h-32 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-3xl">
+          📸
+        </div>
+      )
+    case 'カルチャー':
+      return (
+        <div className="w-full h-32 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-3xl">
+          🎭
+        </div>
+      )
+    case '海外':
+      return (
+        <div className="w-full h-32 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center text-3xl">
+          ✈️
+        </div>
+      )
+    case '格闘技':
+      return (
+        <div className="w-full h-32 rounded-lg bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-3xl">
+          🥋
+        </div>
+      )
+    case '食':
+      return (
+        <div className="w-full h-32 rounded-lg bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-3xl">
+          🍽️
+        </div>
+      )
+    case 'ドラマ・映画・アニメ':
+      return (
+        <div className="w-full h-32 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-3xl">
+          📺
+        </div>
+      )
+    default:
+      return <div className="w-full h-32 rounded-lg bg-gray-700" />
+  }
+}
+
 const PassionCard = ({
   item,
   index,
@@ -65,20 +120,23 @@ const PassionCard = ({
   return (
     <div
       ref={cardRef}
-      className="group relative p-4 sm:p-6 rounded-lg border border-gray-700 backdrop-blur-md bg-gradient-to-br from-gray-900/50 to-gray-800/30 hover:border-neon-orange transition-all duration-500 cursor-pointer overflow-hidden"
+      className="group relative rounded-lg border border-gray-700 backdrop-blur-md bg-gradient-to-br from-gray-900/50 to-gray-800/30 hover:border-neon-orange transition-all duration-500 cursor-pointer overflow-hidden"
     >
       {/* Background animation */}
       <div className="absolute inset-0 bg-gradient-to-r from-neon-orange via-transparent to-electric-blue opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-neon-orange/20 to-electric-blue/20 flex items-center justify-center mb-3 group-hover:from-neon-orange/40 group-hover:to-electric-blue/40 transition-all duration-300">
-          <span className="text-lg font-bold text-neon-orange">◆</span>
+        {/* Image/Icon */}
+        <div className="overflow-hidden">{getIconForPassion(item.title)}</div>
+
+        {/* Text */}
+        <div className="p-4 sm:p-6">
+          <h4 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-white">
+            {item.title}
+          </h4>
+          <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
         </div>
-        <h4 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-white">
-          {item.title}
-        </h4>
-        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
       </div>
 
       {/* Glow */}

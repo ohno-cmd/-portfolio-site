@@ -157,6 +157,15 @@ export default function CareerTimeline() {
             <p className="text-gray-400 text-sm">企業コンサル実績</p>
           </div>
         </div>
+
+        {/* Profile Photo */}
+        <div className="mt-24 pt-16 border-t border-gray-700/50">
+          <img
+            src="/image/宣材写真①.jpg"
+            alt="大野修斗 宣材写真"
+            className="w-full max-w-2xl mx-auto rounded-lg shadow-2xl shadow-neon-orange/30 hover:shadow-neon-orange/50 transition-all duration-500"
+          />
+        </div>
       </div>
     </section>
   )

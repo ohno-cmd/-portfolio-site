@@ -154,39 +154,39 @@ export default function DeepStory() {
           {/* Timeline items */}
           <div className="space-y-8 sm:space-y-12 md:space-y-24">
             {storyItems.map((item, index) => (
-              <div
-                key={index}
-                className={`timeline-item flex md:flex-row ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                }`}
-              >
-                {/* Content */}
-                <div className="w-full md:w-1/2 px-0 sm:px-4 md:px-8">
-                  <div
-                    className={`p-4 sm:p-6 md:p-8 rounded-lg border ${
-                      index % 2 === 0
-                        ? 'border-neon-orange bg-opacity-5 bg-neon-orange'
-                        : 'border-electric-blue bg-opacity-5 bg-electric-blue'
-                    } backdrop-blur-sm hover:backdrop-blur-md transition-all duration-300`}
-                  >
-                    <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                      <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gray-500 whitespace-nowrap">
-                        {item.year}
-                      </span>
-                      <div
-                        className={`h-0.5 flex-1 ${
-                          index % 2 === 0
-                            ? 'bg-neon-orange'
-                            : 'bg-electric-blue'
-                        }`}
-                      />
+              <div key={index}>
+                <div
+                  className={`timeline-item flex md:flex-row ${
+                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                  }`}
+                >
+                  {/* Content */}
+                  <div className="w-full md:w-1/2 px-0 sm:px-4 md:px-8">
+                    <div
+                      className={`p-4 sm:p-6 md:p-8 rounded-lg border ${
+                        index % 2 === 0
+                          ? 'border-neon-orange bg-opacity-5 bg-neon-orange'
+                          : 'border-electric-blue bg-opacity-5 bg-electric-blue'
+                      } backdrop-blur-sm hover:backdrop-blur-md transition-all duration-300`}
+                    >
+                      <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                        <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gray-500 whitespace-nowrap">
+                          {item.year}
+                        </span>
+                        <div
+                          className={`h-0.5 flex-1 ${
+                            index % 2 === 0
+                              ? 'bg-neon-orange'
+                              : 'bg-electric-blue'
+                          }`}
+                        />
+                      </div>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">{item.title}</h3>
+                      <p className="text-gray-300 leading-relaxed text-xs sm:text-sm md:text-base">
+                        {item.content}
+                      </p>
                     </div>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">{item.title}</h3>
-                    <p className="text-gray-300 leading-relaxed text-xs sm:text-sm md:text-base">
-                      {item.content}
-                    </p>
                   </div>
-                </div>
 
                 {/* Dot - hidden on mobile, visible on md+ */}
                 <div className="hidden md:flex md:w-0 justify-center">
@@ -210,6 +210,27 @@ export default function DeepStory() {
 
                 {/* Spacing - hidden on mobile */}
                 <div className="hidden md:block md:w-1/2" />
+                </div>
+
+                {/* Insert photos at specific timeline points */}
+                {index === 3 && (
+                  <div className="w-full mt-8 mb-8">
+                    <img
+                      src="/image/大学時代.jpg"
+                      alt="大学時代"
+                      className="w-full max-w-2xl mx-auto rounded-lg shadow-2xl shadow-electric-blue/30 hover:shadow-electric-blue/50 transition-all duration-500"
+                    />
+                  </div>
+                )}
+                {index === 8 && (
+                  <div className="w-full mt-8 mb-8">
+                    <img
+                      src="/image/タツミコーポレーション.jpg"
+                      alt="タツミコーポレーション"
+                      className="w-full max-w-2xl mx-auto rounded-lg shadow-2xl shadow-neon-orange/30 hover:shadow-neon-orange/50 transition-all duration-500"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
