@@ -11,14 +11,14 @@ const achievements = [
     id: 1,
     title: 'EC改善実績',
     description: '月平均売上150万円UP',
-    icon: '📊',
+    icon: '01',
     size: 'large',
   },
   {
     id: 2,
     title: 'webマーケ実績',
     description: 'LP制作→メタ広告で店舗予約数6倍へ成長',
-    icon: '📈',
+    icon: '02',
     size: 'large',
   },
   {
@@ -26,42 +26,42 @@ const achievements = [
     title: 'web制作実績',
     description:
       '株式会社ミギウデHP、その他LP制作複数、アプリ開発（AIエンジニア領域の駆使）',
-    icon: '💻',
+    icon: '03',
     size: 'large',
   },
   {
     id: 4,
     title: '財務管理実績',
     description: '飲食店固定費30万円カット、PL管理、全社の資金繰り管理',
-    icon: '💰',
+    icon: '04',
     size: 'medium',
   },
   {
     id: 5,
     title: '資金調達実績',
     description: 'クラファン支援280万円調達成功（CAMPFIRE日別総合部門1位）',
-    icon: '🚀',
+    icon: '05',
     size: 'medium',
   },
   {
     id: 6,
     title: 'SNS運用実績',
     description: 'カフェの平均月売上15万円UP',
-    icon: '📱',
+    icon: '06',
     size: 'medium',
   },
   {
     id: 7,
     title: 'Claude Code研修',
     description: '社内・社外向けAI活用/自動化システム構築研修の実施',
-    icon: '🤖',
+    icon: '07',
     size: 'medium',
   },
   {
     id: 8,
     title: '経営コンサル',
     description: '中小企業コンサル経験10社以上',
-    icon: '👔',
+    icon: '08',
     size: 'medium',
   },
 ]
@@ -126,9 +126,13 @@ const AchievementCard = ({
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">{item.icon}</div>
-        <h3 className="text-base sm:text-lg md:text-2xl font-bold mb-2 sm:mb-3">{item.title}</h3>
-        <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+        <div className="text-4xl sm:text-5xl md:text-6xl font-black text-neon-orange mb-4 opacity-20 select-none">
+          {item.icon}
+        </div>
+        <h3 className="text-base sm:text-lg md:text-2xl font-bold mb-2 sm:mb-3 text-white">
+          {item.title}
+        </h3>
+        <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed">
           {item.description}
         </p>
       </div>
@@ -147,14 +151,26 @@ export default function Achievement() {
       ref={sectionRef}
       className="relative bg-dark-secondary py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
+      {/* Background image with overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-8 -z-10"
+        style={{
+          backgroundImage: 'url(/image/S__10199044_0.jpg)',
+        }}
+      />
+
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-electric-blue/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-0 w-96 h-96 bg-neon-orange/5 rounded-full blur-3xl" />
+      </div>
+
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-center mb-2 sm:mb-4">
-          <span className="text-white">大野修斗が</span>
-          <br />
-          <span className="neon-glow">できること</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-center mb-4 sm:mb-6 leading-tight">
+          <span className="block text-white mb-2">大野修斗が</span>
+          <span className="neon-glow block">できること</span>
         </h2>
 
-        <p className="text-center text-gray-400 mb-12 sm:mb-16 md:mb-24 text-xs sm:text-sm md:text-base">
+        <p className="text-center text-gray-400 mb-12 sm:mb-16 md:mb-24 text-xs sm:text-sm md:text-base font-light">
           実績ベースで、実装可能な領域
         </p>
 

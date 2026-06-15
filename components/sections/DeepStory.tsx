@@ -127,11 +127,15 @@ export default function DeepStory() {
       ref={sectionRef}
       className="relative bg-dark-bg py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 left-10 w-40 h-40 bg-neon-orange/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-40 right-10 w-60 h-60 bg-electric-blue/5 rounded-full blur-3xl" />
+      </div>
+
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 md:mb-24">
-          <span className="text-white">大野修斗の</span>
-          <br />
-          <span className="neon-glow">人生物語</span>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 md:mb-24 leading-tight">
+          <span className="block text-white mb-2">大野修斗の</span>
+          <span className="neon-glow block">人生物語</span>
         </h2>
 
         {/* Timeline */}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,24 +17,114 @@ html {
 body {
   background: #0A0E27;
   color: #fff;
-  font-family: 'Segoe UI', 'Meiryo', sans-serif;
+  font-family: 'Inter', 'Montserrat', sans-serif;
   overflow-x: hidden;
+  letter-spacing: 0.3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 /* Neon Glow Effect */
 .neon-glow {
-  text-shadow: 0 0 10px #FF6B35, 0 0 20px #FF6B35, 0 0 30px #FF6B35;
-  filter: drop-shadow(0 0 10px #FF6B35);
+  text-shadow: 0 0 15px #FF6B35, 0 0 30px #FF6B35, 0 0 45px #FF6B35;
+  filter: drop-shadow(0 0 15px #FF6B35);
+  letter-spacing: 1px;
 }
 
 .neon-glow-blue {
-  text-shadow: 0 0 10px #00D9FF, 0 0 20px #00D9FF;
-  filter: drop-shadow(0 0 10px #00D9FF);
+  text-shadow: 0 0 15px #00D9FF, 0 0 30px #00D9FF;
+  filter: drop-shadow(0 0 15px #00D9FF);
+  letter-spacing: 1px;
 }
 
-/* Smooth scroll for entire page */
+/* Character-by-character animation */
+.char-animate {
+  display: inline-block;
+  animation: charPopIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes charPopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Smooth scroll */
 @supports (scroll-behavior: smooth) {
   html {
     scroll-behavior: smooth;
   }
+}
+
+/* Fade in on scroll */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 15px #FF6B35, 0 0 30px #FF6B35, 0 0 45px #FF6B35;
+    filter: drop-shadow(0 0 15px #FF6B35);
+  }
+  50% {
+    text-shadow: 0 0 25px #FF6B35, 0 0 40px #FF6B35, 0 0 60px #FF6B35;
+    filter: drop-shadow(0 0 25px #FF6B35);
+  }
+}
+
+.glow-animate {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Number counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.count-up {
+  animation: countUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }

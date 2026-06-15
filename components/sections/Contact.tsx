@@ -46,6 +46,14 @@ export default function Contact() {
       ref={sectionRef}
       className="relative min-h-screen bg-gradient-to-b from-dark-secondary to-dark-bg flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-10 -z-10"
+        style={{
+          backgroundImage: 'url(/image/S__10199048_0.jpg)',
+        }}
+      />
+
       {/* Background effects */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-neon-orange/10 rounded-full blur-3xl opacity-30" />
       <div className="absolute bottom-0 left-1/4 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 bg-electric-blue/10 rounded-full blur-3xl opacity-20" />
@@ -55,11 +63,9 @@ export default function Contact() {
           ref={titleRef}
           className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black mb-8 sm:mb-12 leading-tight"
         >
-          <span className="text-white">仕事の話より、</span>
-          <br />
-          <span className="neon-glow">あなたの野望</span>
-          <br />
-          <span className="text-white">を聞かせてください</span>
+          <div className="block text-white mb-3">仕事の話より、</div>
+          <div className="neon-glow block mb-3">あなたの野望</div>
+          <div className="block text-white">を聞かせてください</div>
         </h2>
 
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 sm:mb-16 font-light leading-relaxed">
