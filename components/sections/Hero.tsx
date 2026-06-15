@@ -40,14 +40,8 @@ export default function Hero() {
       {/* Particle Background */}
       <ParticleBackground />
 
-      {/* Background Image with overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-15"
-        style={{
-          backgroundImage: 'url(/image/S__10199043_0.jpg)',
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-bg/50 to-dark-bg" />
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-bg/30 to-dark-bg" />
 
       {/* Content */}
       <div ref={contentRef} className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-full">

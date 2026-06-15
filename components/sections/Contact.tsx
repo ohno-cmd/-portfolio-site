@@ -47,13 +47,7 @@ export default function Contact() {
       ref={sectionRef}
       className="relative min-h-screen bg-gradient-to-b from-dark-secondary to-dark-bg flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-10 -z-10"
-        style={{
-          backgroundImage: 'url(/image/S__10199048_0.jpg)',
-        }}
-      />
+      {/* Background image placeholder removed */}
 
       {/* Background effects */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-neon-orange/10 rounded-full blur-3xl opacity-30" />

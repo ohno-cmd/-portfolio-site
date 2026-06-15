@@ -119,13 +119,7 @@ export default function Passions() {
       ref={sectionRef}
       className="relative bg-dark-bg py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-8 -z-10"
-        style={{
-          backgroundImage: 'url(/image/S__10199045_0.jpg)',
-        }}
-      />
+      {/* Background image placeholder removed */}
 
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-0 w-96 h-96 bg-neon-orange/5 rounded-full blur-3xl" />
