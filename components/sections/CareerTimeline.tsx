@@ -91,7 +91,7 @@ const TimelineItem = ({ year, items, index }: { year: number; items: string[]; i
 }
 
 export default function CareerTimeline() {
-  const sectionRef = useRef<HTMLSection>(null)
+  const sectionRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
