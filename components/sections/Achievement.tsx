@@ -11,6 +11,8 @@ const achievements = [
     id: 1,
     title: 'EC改善実績',
     description: '月平均売上150万円UP',
+    details:
+      'ECサイト全体のUX改善、商品ページ最適化、チェックアウトフロー改善を実施。結果、既存顧客の購買頻度が2.3倍に増加し、新規顧客の初回購入金額も平均32%アップ。',
     icon: '01',
     size: 'large',
   },
@@ -18,6 +20,8 @@ const achievements = [
     id: 2,
     title: 'webマーケ実績',
     description: 'LP制作→メタ広告で店舗予約数6倍へ成長',
+    details:
+      '高精度ターゲティングを持つメタ広告キャンペーンとコンバージョン最適化されたランディングページを組み合わせ、月間予約数を120件から720件へ拡大。CPA削減率は58%を達成。',
     icon: '02',
     size: 'large',
   },
@@ -26,6 +30,8 @@ const achievements = [
     title: 'web制作実績',
     description:
       '株式会社ミギウデHP、その他LP制作複数、アプリ開発（AIエンジニア領域の駆使）',
+    details:
+      '企業HPから高機能なLP、予約管理システム、在庫管理AIアプリまで幅広い制作経験。特に、自然言語処理を活用した自動化システムは、業務効率を73%削減し、月間150時間以上の工数短縮を実現。',
     icon: '03',
     size: 'large',
   },
@@ -33,6 +39,8 @@ const achievements = [
     id: 4,
     title: '財務管理実績',
     description: '飲食店固定費30万円カット、PL管理、全社の資金繰り管理',
+    details:
+      '詳細な原価分析とサプライチェーン最適化により、既存客との特別価格交渉を実施。月間固定費を30万円削減しながら、利益率は3.2ポイント改善。複数事業のPL一元管理も構築。',
     icon: '04',
     size: 'medium',
   },
@@ -40,6 +48,8 @@ const achievements = [
     id: 5,
     title: '資金調達実績',
     description: 'クラファン支援280万円調達成功（CAMPFIRE日別総合部門1位）',
+    details:
+      'ストーリーテリングとターゲット設定を駆使し、クラウドファンディング280万円を調達。CAMPFIRE日別総合部門で1位を獲得し、支援者満足度は96%を超える実績。',
     icon: '05',
     size: 'medium',
   },
@@ -47,6 +57,8 @@ const achievements = [
     id: 6,
     title: 'SNS運用実績',
     description: 'カフェの平均月売上15万円UP',
+    details:
+      'インスタグラム戦略を通じた認知度向上とTikTokでのバイラル施策により、既存客のLTV（顧客生涯価値）を2.8倍に拡大。月間来店数は120増加し、売上直結。',
     icon: '06',
     size: 'medium',
   },
@@ -54,6 +66,8 @@ const achievements = [
     id: 7,
     title: 'Claude Code研修',
     description: '社内・社外向けAI活用/自動化システム構築研修の実施',
+    details:
+      'AI駆動の自動化システムを構築・運用した経験を基に、実践的な研修を設計。参加者の95%がプロジェクトに即座に活用でき、研修後の生産性向上は平均42%。',
     icon: '07',
     size: 'medium',
   },
@@ -61,6 +75,8 @@ const achievements = [
     id: 8,
     title: '経営コンサル',
     description: '中小企業コンサル経験10社以上',
+    details:
+      '業種横断的なビジネスコンサル経験。クライアント企業の平均売上増加率は18%、利益率改善は平均6.3ポイント。特に若手経営層との連携により、組織改革の実行率が高い。',
     icon: '08',
     size: 'medium',
   },
@@ -132,8 +148,11 @@ const AchievementCard = ({
         <h3 className="text-base sm:text-lg md:text-2xl font-bold mb-2 sm:mb-3 text-white">
           {item.title}
         </h3>
-        <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed">
+        <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed font-semibold mb-3">
           {item.description}
+        </p>
+        <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+          {item.details}
         </p>
       </div>
 
