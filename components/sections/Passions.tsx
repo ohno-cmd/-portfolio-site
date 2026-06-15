@@ -8,18 +8,71 @@ gsap.registerPlugin(ScrollTrigger)
 
 const passions = {
   learn: [
-    '英語（やっぱり英語話せるってかっこいい）',
-    '写真（オシャレな写真とか撮ってインスタ載せたい）',
-    'カルチャー（どんなカルチャーでも構いません、文化に興味があります）',
-    '海外（世界の文化、特色に興味があります）',
+    { title: '英語', desc: 'やっぱり英語話せるってかっこいい', image: '/image/英語.jpg' },
+    { title: '写真', desc: 'オシャレな写真とか撮ってインスタ載せたい', image: '/image/写真.jpg' },
+    { title: 'カルチャー', desc: 'どんなカルチャーでも構いません、文化に興味があります', image: '/image/カルチャー.jpg' },
+    { title: '海外', desc: '世界の文化、特色に興味があります', image: '/image/海外.jpg' },
   ],
   love: [
-    '犬（犬の事業支援をきっかけに好きになりました）',
-    '格闘技（空手やってました、RIZIN見てます）',
-    '朝活（朝に太陽を浴びてジムで鍛える、朝を制する者は人生を制す）',
-    '食（オシャレな空間が好きです）',
-    'ドラマ・映画・アニメ（VIVANTとか今際の国のアリスとか面白すぎるでしょ）',
+    { title: '犬', desc: '犬の事業支援をきっかけに好きになりました', image: '/image/犬.jpg' },
+    { title: '格闘技', desc: '空手やってました、RIZIN見てます', image: '/image/格闘技.jpg' },
+    { title: '朝活', desc: '朝に太陽を浴びてジムで鍛える、朝を制する者は人生を制す', image: '/image/朝活.jpg' },
+    { title: '食', desc: 'オシャレな空間が好きです', image: '/image/食事.jpg' },
+    { title: 'ドラマ・映画・アニメ', desc: 'VIVANTとか今際の国のアリスとか面白すぎるでしょ' },
   ],
+}
+
+const PassionCard = ({ item }: { item: typeof passions.learn[0] }) => {
+  const cardRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!cardRef.current) return
+
+    gsap.from(cardRef.current, {
+      scrollTrigger: {
+        trigger: cardRef.current,
+        start: 'top 85%',
+        end: 'top 50%',
+        scrub: 0.3,
+        markers: false,
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.7,
+    })
+
+    const card = cardRef.current
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { y: -8, duration: 0.3, overwrite: 'auto' })
+    })
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { y: 0, duration: 0.3, overwrite: 'auto' })
+    })
+  }, [])
+
+  return (
+    <div
+      ref={cardRef}
+      className="group relative rounded-lg border border-gray-700 backdrop-blur-md bg-gradient-to-br from-gray-900/50 to-gray-800/30 hover:border-neon-orange transition-all duration-500 cursor-pointer overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-neon-orange via-transparent to-electric-blue opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+
+      <div className="relative z-10">
+        {item.image && (
+          <img src={item.image} alt={item.title} className="w-full h-40 object-cover" />
+        )}
+
+        <div className={item.image ? 'p-4 sm:p-6' : 'p-4 sm:p-6'}>
+          <h4 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-white">
+            {item.title}
+          </h4>
+          <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+        </div>
+      </div>
+
+      <div className="absolute -inset-1 bg-gradient-to-r from-neon-orange to-electric-blue rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl" />
+    </div>
+  )
 }
 
 export default function Passions() {
@@ -43,7 +96,7 @@ export default function Passions() {
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-electric-blue/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="max-w-5xl mx-auto w-full">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-center mb-12 sm:mb-16 md:mb-24 leading-tight">
           <span className="block text-white mb-2">大野修斗の</span>
           <span className="neon-glow block">パッション</span>
@@ -53,31 +106,21 @@ export default function Passions() {
           {/* 学びたいこと */}
           <div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-white">学びたいこと</h3>
-            <ul className="space-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {passions.learn.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="text-base sm:text-lg text-gray-300 leading-relaxed hover:text-neon-orange transition-colors"
-                >
-                  • {item}
-                </li>
+                <PassionCard key={idx} item={item} />
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* 好きなこと */}
           <div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-white">好きなこと</h3>
-            <ul className="space-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {passions.love.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="text-base sm:text-lg text-gray-300 leading-relaxed hover:text-electric-blue transition-colors"
-                >
-                  • {item}
-                </li>
+                <PassionCard key={idx} item={item} />
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
