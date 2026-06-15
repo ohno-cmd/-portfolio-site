@@ -1,0 +1,41 @@
+
+> portfolio-site@1.0.0 build
+> next build
+
+(node:19364) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%E5%A4%A7%E9%87%8E%20%E4%BF%AE%E6%96%97/Desktop/portfolio-site/next.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\大野 修斗\Desktop\portfolio-site\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   ▲ Next.js 15.5.19
+
+   Creating an optimized production build ...
+(node:26388) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%E5%A4%A7%E9%87%8E%20%E4%BF%AE%E6%96%97/Desktop/portfolio-site/next.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\大野 修斗\Desktop\portfolio-site\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27628) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%E5%A4%A7%E9%87%8E%20%E4%BF%AE%E6%96%97/Desktop/portfolio-site/next.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\大野 修斗\Desktop\portfolio-site\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25356) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%E5%A4%A7%E9%87%8E%20%E4%BF%AE%E6%96%97/Desktop/portfolio-site/next.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\大野 修斗\Desktop\portfolio-site\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 14.9s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./components/sections/Passions.tsx:151:40
+Type error: Type '{ title: string; desc: string; image: string; } | { title: string; desc: string; image?: undefined; }' is not assignable to type '{ title: string; desc: string; image: string; }'.
+  Type '{ title: string; desc: string; image?: undefined; }' is not assignable to type '{ title: string; desc: string; image: string; }'.
+    Types of property 'image' are incompatible.
+      Type 'undefined' is not assignable to type 'string'.
+
+[0m [90m 149 |[39m             [33m<[39m[33mdiv[39m className[33m=[39m[32m"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"[39m[33m>[39m
+ [90m 150 |[39m               {passions[33m.[39mlove[33m.[39mmap((item[33m,[39m idx) [33m=>[39m (
+[31m[1m>[22m[39m[90m 151 |[39m                 [33m<[39m[33mPassionCard[39m key[33m=[39m{idx} item[33m=[39m{item} [33m/[39m[33m>[39m
+ [90m     |[39m                                        [31m[1m^[22m[39m
+ [90m 152 |[39m               ))}
+ [90m 153 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 154 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+Next.js build worker exited with code: 1 and signal: null

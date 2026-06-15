@@ -57,7 +57,13 @@ const passions = {
   ],
 }
 
-const PassionCard = ({ item }: { item: typeof passions.learn[0] }) => {
+type PassionItem = {
+  title: string
+  desc: string
+  image?: string
+}
+
+const PassionCard = ({ item }: { item: PassionItem }) => {
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
