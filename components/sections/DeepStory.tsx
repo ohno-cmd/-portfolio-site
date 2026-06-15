@@ -127,6 +127,14 @@ export default function DeepStory() {
       ref={sectionRef}
       className="relative bg-dark-bg py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-7 -z-10"
+        style={{
+          backgroundImage: 'url(/image/S__10199043_0.jpg)',
+        }}
+      />
+
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-40 h-40 bg-neon-orange/5 rounded-full blur-3xl" />
         <div className="absolute bottom-40 right-10 w-60 h-60 bg-electric-blue/5 rounded-full blur-3xl" />

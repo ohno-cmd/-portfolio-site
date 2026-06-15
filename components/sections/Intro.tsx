@@ -52,6 +52,14 @@ export default function Intro() {
       ref={sectionRef}
       className="relative min-h-screen bg-dark-secondary flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6 md:px-8"
     >
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-12 -z-10"
+        style={{
+          backgroundImage: 'url(/image/S__10199047_0.jpg)',
+        }}
+      />
+
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-neon-orange/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-electric-blue/5 rounded-full blur-3xl -z-10" />

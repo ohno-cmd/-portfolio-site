@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import Hero from '@/components/sections/Hero'
 import Intro from '@/components/sections/Intro'
+import CareerTimeline from '@/components/sections/CareerTimeline'
 import DeepStory from '@/components/sections/DeepStory'
 import Achievement from '@/components/sections/Achievement'
 import Passions from '@/components/sections/Passions'
@@ -18,6 +19,7 @@ export default function Home() {
     <main className="relative overflow-hidden">
       <Hero />
       <Intro />
+      <CareerTimeline />
       <DeepStory />
       <Achievement />
       <Passions />
