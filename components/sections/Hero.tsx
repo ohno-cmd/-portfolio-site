@@ -53,9 +53,9 @@ export default function Hero() {
       <div ref={contentRef} className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-full">
         {/* Main Catchphrase - Character by character */}
         <div className="mb-10 sm:mb-14 md:mb-16">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black leading-tight tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight">
             <div className="neon-glow glow-animate">
-              <CharcterAnimation text="Create Excitement" delay={0} />
+              <CharcterAnimation text="Create Movement" delay={0} />
             </div>
           </h1>
         </div>

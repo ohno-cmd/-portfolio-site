@@ -213,15 +213,6 @@ export default function DeepStory() {
                 </div>
 
                 {/* Insert photos at specific timeline points */}
-                {index === 3 && (
-                  <div className="w-full mt-8 mb-8">
-                    <img
-                      src="/image/大学時代.jpg"
-                      alt="大学時代"
-                      className="w-full max-w-2xl mx-auto rounded-lg shadow-2xl shadow-electric-blue/30 hover:shadow-electric-blue/50 transition-all duration-500"
-                    />
-                  </div>
-                )}
                 {index === 8 && (
                   <div className="w-full mt-8 mb-8">
                     <img
