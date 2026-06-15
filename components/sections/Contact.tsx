@@ -74,7 +74,7 @@ export default function Contact() {
           新しい出会いと協力の機会を、心待ちにしています。
         </p>
 
-        <div ref={ctaRef} className="space-y-4 sm:space-y-6">
+        <div ref={ctaRef} className="space-y-4 sm:space-y-6 flex flex-col items-center">
           {/* LINE Button */}
           <a
             href="https://line.me/R/ti/p/"
@@ -82,8 +82,8 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="inline-block group relative w-full sm:w-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-neon-orange to-electric-blue rounded-lg sm:rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
-            <button className="relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-dark-bg border-2 border-neon-orange rounded-lg sm:rounded-xl font-bold text-base sm:text-lg text-neon-orange hover:text-dark-bg hover:bg-neon-orange transition-all duration-300 uppercase tracking-wider">
+            <div className="absolute -inset-1 bg-gradient-to-r from-neon-orange via-electric-blue to-neon-orange rounded-lg sm:rounded-xl blur-xl opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:blur-2xl" />
+            <button className="relative w-full sm:w-auto px-10 sm:px-14 py-5 sm:py-6 bg-dark-bg border-2 border-neon-orange rounded-lg sm:rounded-xl font-bold text-base sm:text-lg text-neon-orange hover:text-dark-bg hover:bg-neon-orange transition-all duration-300 uppercase tracking-widest hover:shadow-2xl hover:shadow-neon-orange/50">
               LINEで連絡する
             </button>
           </a>
