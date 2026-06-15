@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0E27;
+  color: #fff;
+  font-family: 'Segoe UI', 'Meiryo', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+  text-shadow: 0 0 10px #FF6B35, 0 0 20px #FF6B35, 0 0 30px #FF6B35;
+  filter: drop-shadow(0 0 10px #FF6B35);
+}
+
+.neon-glow-blue {
+  text-shadow: 0 0 10px #00D9FF, 0 0 20px #00D9FF;
+  filter: drop-shadow(0 0 10px #00D9FF);
+}
+
+/* Smooth scroll for entire page */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
