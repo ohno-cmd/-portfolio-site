@@ -58,9 +58,7 @@ export default function Contact() {
           ref={titleRef}
           className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black mb-8 sm:mb-12 leading-tight"
         >
-          <div className="block text-white mb-3">仕事の話より、</div>
-          <div className="neon-glow block mb-3">あなたの野望</div>
-          <div className="block text-white">を聞かせてください</div>
+          <div className="neon-glow block">友達になりましょう</div>
         </h2>
 
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 sm:mb-16 font-light leading-relaxed">
