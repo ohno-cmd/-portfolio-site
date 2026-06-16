@@ -26,6 +26,15 @@ const achievements = [
     size: 'large',
   },
   {
+    id: 3,
+    title: 'Web制作',
+    description: 'HP制作/LP制作、アプリ開発、自動化システム構築',
+    details:
+      '顧客視点でのLP制作や、オーダーメイドの勤怠システム、管理システム構築、ECサイトの自動顧客セグメントメルマガ送信機能、広告の自動化など様々な案件を対応できます。',
+    icon: '03',
+    size: 'medium',
+  },
+  {
     id: 4,
     title: '財務管理実績',
     description: '飲食店30万円のコストカット、経営アドバイス',
